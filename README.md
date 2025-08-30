@@ -19,8 +19,9 @@ Whether you're a student, researcher, mentor, or policymaker, this is your chanc
 
 - 🔬 Advance quantum innovation across climate, AI, healthcare, and more  
 - 🌐 Build bridges between Egypt and the global quantum community  
-- 🧑‍🎓 Empower the next generation of quantum thinkers and doers  
-- 🇸🇦 Expand quantum education and collaboration across the Arab region  
+- 🧑‍🎓 Empower the next generation of quantum thinkers and doers
+- 🔭 Expand quantum education and collaboration across the Arab region  
+ 
 
 ---
 
