@@ -1,2 +1,3 @@
-# Alexandria-Quantum-Hackathon-2025
- is the first hackathon of its kind in Egypt and a significant national multi-day event bringing together leading experts, researchers, and innovators to delve into the advancements and future of quantum technologies and their impact on various sectors, with a particular focus on fostering innovation in the Arab World. 
+🌍 Alexandria Quantum Hackathon 2025
+Egypt’s First National Quantum Hackathon
+Welcome to a historic leap into the quantum future—right from the heart of Alexandria. Organized by Bibliotheca Alexandrina and iQafé Academy, and proudly supported by the Open Quantum Institute (OQI), this event marks Egypt’s debut on the global quantum innovation map.
