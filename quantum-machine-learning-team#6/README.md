@@ -1,4 +1,4 @@
-# QMedicine for Parkinson’s Disease Classification 
+# QMedicine for Parkinson’s Disease Classification 🧠
 *A Comparative Study of Classical and Fully-Quantum Machine Learning Models*
 
 ---
@@ -161,7 +161,7 @@ Despite quantum noise and hardware limitations, the **8-qubit QNN** achieved str
 ---
 
 ## Acknowledgements
-This work was conducted during the **Egypt National Quantum Hackathon** — the first of its kind — where our **QMedicine** team won **2nd place**.  
+This work was conducted during the **Egypt National Quantum Hackathon** — the first of its kind — where our **QMedicine** team won **2nd place** 🥈
 
 We thank our mentors and the organizing committee for their guidance and support in advancing Quantum Computing in Egypt.
 
