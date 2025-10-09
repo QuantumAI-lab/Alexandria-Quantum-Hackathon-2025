@@ -6,7 +6,7 @@
 ## Abstract
 Parkinson’s disease (PD) is a neurodegenerative disorder caused by progressive dopamine neuron loss, leading to motor and speech impairments.  
 
-This repository provides a **scientific and reproducible framework** for comparing **classical ML models** and a **fully quantum variational classifier** using the [Parkinson’s Dataset](https://archive.ics.uci.edu/dataset/470/parkinson+s+disease+classification).
+This repository provides a **scientific and reproducible framework** for comparing **classical ML models** and a **fully quantum variational classifier**.
 
 ---
 
