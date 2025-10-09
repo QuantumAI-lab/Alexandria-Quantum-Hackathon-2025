@@ -1,0 +1,26 @@
+timestamp,backend,job_id,mode,shots,notes
+2025-09-11 08:59:52.232Z,ibm_pittsburgh,N/A,physical,100000,first try to get the result of 14 Qubits
+2025-09-11T09:17:24.982080Z,ibm_pittsburgh,N/A,physical,100000,Final run of 14 Qubits
+2025-09-11 09:14:16.728Z,ibm_pittsburgh,N/A,physical,,itration 1 of 12 Qubits
+2025-09-11 09:40:31.966Z,ibm_pittsburgh,N/A,physical,,itration 2 of 12 Qubits
+2025-09-11 15:27:15.360Z,ibm_pittsburgh,N/A,physical,100000,didn’t get response WARNING:urllib3.connectionpool
+2025-09-11T18:47:49Z,ibm_kingston,N/A,physical,2048,QAOA execution
+2025-09-11T18:57:37Z,ibm_kingston,N/A,physical,2048,QAOA execution
+2025-09-11T20:10:50Z,ibm_kingston,N/A,physical,2048,QAOA with automated penalty
+2025-09-11T20:16:32Z,ibm_kingston,N/A,physical,,QAOA execution
+2025-09-11T21:07:01Z,ibm_kingston,N/A,physical,,QAOA execution
+2025-09-11T21:17:28Z,ibm_kingston,N/A,physical,2048,QAOA with automated penalty
+2025-09-11T21:26:36Z,ibm_kingston,N/A,physical,,QAOA execution
+2025-09-11T21:31:23Z,ibm_kingston,N/A,physical,,QAOA execution
+2025-09-11T21:36:02Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T21:44:41Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T21:53:48Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T22:04:41Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T22:30:36Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T22:41:12Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T22:56:53Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T23:05:28Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-11T23:21:30Z,ibm_kingston,N/A,physical,,QAOA execution
+2025-09-11T23:29:53Z,ibm_kingston,N/A,physical,2048,QAOA balanced trips
+2025-09-11T23:42:21Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP
+2025-09-12T00:35:21Z,ibm_kingston,N/A,physical,2048,QAOA 30-qubit VRP

@@ -1,0 +1,31 @@
+Objective value: 998.854700
+
+Active edges:
+  H -> DT
+  H -> R3_2
+  DT -> GR
+  GR -> R2
+  R2 -> H
+  R3_2 -> R2
+  IT -> H
+
+Reconstructed routes (indices -> names):
+  H -> DT -> GR -> R2 -> H
+  H -> R3_2 -> R2 -> H
+Trip 1: H -> DT -> GR -> R2 -> H  distance=34.6620 km
+Trip 2: H -> R3_2 -> R2 -> H  distance=26.7879 km
+
+Total computed distance: 61.4499 km
+Node DT: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node GR: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node R2: incoming_sum=2.000000 ok_in=False; outgoing_sum=1.000000 ok_out=True
+Node R3_2: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node IT: incoming_sum=0.000000 ok_in=False; outgoing_sum=1.000000 ok_out=True
+Hospital departures sum=2.000000 expected=2
+Hospital returns    sum=2.000000 expected=2
+Total patient incoming visits: 5.000000 capacity_rhs=5
+
+All constraints satisfied? False
+Constraint violations:
+  - R2 incoming: 2.0 != 1
+  - IT incoming: 0.0 != 1

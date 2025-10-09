@@ -1,0 +1,29 @@
+QAOA run evidence log
+Backend: ibm_pittsburgh
+Result status: OptimizationResultStatus.SUCCESS
+Objective value: 192.6675
+
+First iteration
+--- Combination 1/10: Trip A patients = ['DT', 'GR', 'R2'] ---
+Local problem size n_local=4 nodes -> expected qubits (binary vars) = 12
+base_primitive._get_mode_service_backend:WARNING:2025-09-11 09:14:16,728: A backend was passed in as the mode but a session context manager is open so this job will run inside this session/batch instead of in job mode.
+
+Warning: extracted path is incomplete (may be due to QAOA approximation). 
+Extracted local path: [0, 3]
+QAOA didn't give a clean Hamiltonian cycle; selected patients: [1, 2, 3]
+Using brute-force best permutation among selected patients: (1, 2, 3) cost: 34.661
+Trip A distance (evaluated): 34.661000, Trip B distance: 25.740000, Total: 60.401000
+>> New best solution recorded.
+
+
+Second iteration
+--- Combination 2/10: Trip A patients = ['DT', 'GR', 'R3_2'] ---
+Local problem size n_local=4 nodes -> expected qubits (binary vars) = 12
+base_primitive._get_mode_service_backend:WARNING:2025-09-11 09:40:31,966: A backend was passed in as the mode but a session context manager is open so this job will run inside this session/batch instead of in job mode.
+
+Warning: extracted path is incomplete (may be due to QAOA approximation).
+Extracted local path: [0, 3]
+QAOA didn't give a clean Hamiltonian cycle; selected patients: [1, 2, 4]
+Using brute-force best permutation among selected patients: (1, 2, 3) cost: 28.456
+Trip A distance (evaluated): 28.456000, Trip B distance: 28.854000, Total: 57.310000
+>> New best solution recorded.

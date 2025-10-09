@@ -1,0 +1,25 @@
+Recorded job: unknown_job_id on ibm_kingston
+Finished in 305.377 s. Status: OptimizationResultStatus.SUCCESS
+Objective value: 1048.307200
+
+Active edges:
+  H -> DT
+  DT -> GR
+  GR -> R3_2
+  R2 -> H
+  R3_2 -> IT
+  IT -> DT
+
+Reconstructed routes (indices -> names):
+  H -> DT -> GR -> R3_2 -> IT -> DT -> H
+Trip 1: H -> DT -> GR -> R3_2 -> IT -> DT -> H  distance=50.6364 km
+
+Total computed distance: 50.6364 km
+Node DT: incoming_sum=2.000000 ok_in=False; outgoing_sum=1.000000 ok_out=True
+Node GR: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node R2: incoming_sum=0.000000 ok_in=False; outgoing_sum=1.000000 ok_out=True
+Node R3_2: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node IT: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Hospital departures sum=1.000000 expected=2
+Hospital returns    sum=1.000000 expected=2
+Total patient incoming visits: 5.000000 capacity_rhs=5

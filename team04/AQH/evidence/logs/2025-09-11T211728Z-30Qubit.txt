@@ -1,0 +1,45 @@
+Recorded job: unknown_job_id on ibm_kingston
+Finished in 1103.735 s. Status: OptimizationResultStatus.SUCCESS
+Objective value: 1333.519400
+
+Solution variables (non-zero):
+  x_0_1 = 1.0
+  x_1_0 = 1.0
+  x_1_3 = 1.0
+  x_2_0 = 1.0
+  x_3_5 = 1.0
+  x_4_2 = 1.0
+  x_5_2 = 1.0
+
+Active edges:
+  H -> DT
+  DT -> H
+  DT -> R2
+  GR -> H
+  R2 -> IT
+  R3_2 -> GR
+  IT -> GR
+
+Reconstructed routes (node indices):
+H -> DT -> H
+Trip 1: H -> DT -> H  distance=22.8221 km
+
+Total computed distance: 22.8221 km
+
+ENHANCED CONSTRAINT CHECKS:
+ Node DT (index 1): incoming_sum=1.000000 satisfied=True; outgoing_sum=2.000000 satisfied=False
+ Node GR (index 2): incoming_sum=2.000000 satisfied=False; outgoing_sum=1.000000 satisfied=True
+ Node R2 (index 3): incoming_sum=1.000000 satisfied=True; outgoing_sum=1.000000 satisfied=True
+ Node R3_2 (index 4): incoming_sum=0.000000 satisfied=False; outgoing_sum=1.000000 satisfied=True
+ Node IT (index 5): incoming_sum=1.000000 satisfied=True; outgoing_sum=1.000000 satisfied=True
+ Departures from H: sum=1.000000, expected=2, satisfied=False
+ Returns to H:     sum=2.000000, expected=2, satisfied=True
+ Total patient incoming visits: 5.000000, capacity_rhs=5, satisfied=True
+
+All constraints satisfied? False
+
+Constraint violations detected:
+  - Node DT outgoing constraint violated: 2.0 != 1
+  - Node GR incoming constraint violated: 2.0 != 1
+  - Node R3_2 incoming constraint violated: 0.0 != 1
+  - Hospital departure constraint violated: 1.0 != 2

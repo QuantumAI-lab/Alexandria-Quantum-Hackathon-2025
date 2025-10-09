@@ -1,0 +1,39 @@
+Quadratic program created with hard linear constraints:
+Number of variables: 30
+Number of constraints: 13
+qiskit_runtime_service._resolve_cloud_instances:WARNING:2025-09-11 20:58:53,837: Default instance not set. Searching all available instances.
+Using backend: ibm_kingston (pending jobs: 29)
+QUBO created with automated penalty
+Number of QUBO variables: 33
+Recorded job: unknown_job_id on ibm_kingston
+Finished in 274.125 s. Status: OptimizationResultStatus.SUCCESS
+Objective value: 6057.467300
+
+Active edges:
+  H -> DT
+  H -> R3_2
+  DT -> R2
+  R2 -> H
+  R3_2 -> IT
+  IT -> H
+
+Reconstructed routes (indices -> names):
+  H -> DT -> R2 -> H
+  H -> R3_2 -> IT -> H
+Trip 1: H -> DT -> R2 -> H  distance=31.4149 km
+Trip 2: H -> R3_2 -> IT -> H  distance=26.0524 km
+
+Total computed distance: 57.4673 km
+Node DT: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node GR: incoming_sum=0.000000 ok_in=False; outgoing_sum=0.000000 ok_out=False
+Node R2: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node R3_2: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Node IT: incoming_sum=1.000000 ok_in=True; outgoing_sum=1.000000 ok_out=True
+Hospital departures sum=2.000000 expected=2
+Hospital returns    sum=2.000000 expected=2
+Total patient incoming visits: 4.000000 capacity_rhs=5
+
+All constraints satisfied? False
+Constraint violations:
+  - GR incoming: 0.0 != 1
+  - GR outgoing: 0.0 != 1

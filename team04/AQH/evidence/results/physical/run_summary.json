@@ -1,0 +1,301 @@
+[
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 177.8707,
+    "constraints_satisfied": true,
+    "total_distance": 57.5244,
+    "execution_time": 234.2312946365421
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 169.8104,
+    "constraints_satisfied": true,
+    "total_distance": 63.107,
+    "execution_time": 265.7258050441742
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 2,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 699.610099999998,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "Node R3_2 outgoing constraint violated: 2.0 != 1",
+      "Hospital departure constraint violated: 1.0 != 2"
+    ],
+    "total_distance": 29.2806,
+    "execution_time": 364.0510654449463,
+    "penalty_method": "automated",
+    "timestamp": "2025-09-11T20:10:50Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 169.8104,
+    "constraints_satisfied": true,
+    "total_distance": 63.107,
+    "execution_time": 395.614639043808,
+    "timestamp": "2025-09-11T20:16:33Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 169.8104,
+    "constraints_satisfied": true,
+    "total_distance": 63.107,
+    "execution_time": 2602.25718998909,
+    "timestamp": "2025-09-11T21:07:01Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 2,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 1333.5194000000029,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "Node DT outgoing constraint violated: 2.0 != 1",
+      "Node GR incoming constraint violated: 2.0 != 1",
+      "Node R3_2 incoming constraint violated: 0.0 != 1",
+      "Hospital departure constraint violated: 1.0 != 2"
+    ],
+    "total_distance": 22.8221,
+    "execution_time": 1103.734714269638,
+    "penalty_method": "automated",
+    "timestamp": "2025-09-11T21:17:28Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 177.8707,
+    "constraints_satisfied": true,
+    "total_distance": 57.5244,
+    "execution_time": 1642.732251882553,
+    "timestamp": "2025-09-11T21:26:36Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 169.8104,
+    "constraints_satisfied": true,
+    "total_distance": 63.107,
+    "execution_time": 60.453354835510254,
+    "timestamp": "2025-09-11T21:31:23Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 2,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 1048.3071999999993,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "DT incoming: 2.0 != 1",
+      "R2 incoming: 0.0 != 1",
+      "Hospital departures: 1.0 != 2",
+      "Hospital returns: 1.0 != 2"
+    ],
+    "total_distance": 50.636399999999995,
+    "execution_time_sec": 305.37653064727783,
+    "penalty": 200.0,
+    "timestamp": "2025-09-11T21:36:02Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 2,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 6057.467299999989,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "GR incoming: 0.0 != 1",
+      "GR outgoing: 0.0 != 1"
+    ],
+    "total_distance": 57.467299999999994,
+    "execution_time_sec": 274.12514543533325,
+    "penalty": 2000.0,
+    "timestamp": "2025-09-11T21:44:42Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 2,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 100077.64249999984,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "DT outgoing: 0.0 != 1",
+      "R2 outgoing: 2.0 != 1",
+      "IT incoming: 2.0 != 1",
+      "IT outgoing: 2.0 != 1",
+      "Capacity violated: 6.0 > 5"
+    ],
+    "total_distance": 54.065099999999994,
+    "execution_time_sec": 276.0584955215454,
+    "penalty": 20000.0,
+    "timestamp": "2025-09-11T21:53:48Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 3,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 872.0236000000004,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "DT incoming: 0.0 != 1",
+      "GR incoming: 2.0 != 1",
+      "R2 outgoing: 2.0 != 1",
+      "Hospital departures: 1.0 != 2"
+    ],
+    "total_distance": 48.8551,
+    "execution_time_sec": 464.9867277145386,
+    "penalty": 200.0,
+    "timestamp": "2025-09-11T22:04:42Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 3,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 998.8546999999962,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "R2 incoming: 2.0 != 1",
+      "IT incoming: 0.0 != 1"
+    ],
+    "total_distance": 61.4499,
+    "execution_time_sec": 511.8241014480591,
+    "penalty": 470.0,
+    "timestamp": "2025-09-11T22:30:37Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 2,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 1476.6160999999993,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "R2 outgoing: 0.0 != 1",
+      "R3_2 incoming: 0.0 != 1",
+      "Singleton loop for GR (x_0_2 + x_2_0 = 2.0)"
+    ],
+    "total_distance": 62.544999999999995,
+    "execution_time_sec": 284.31984066963196,
+    "penalty": 470.0,
+    "timestamp": "2025-09-11T22:41:12Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 4,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 1955.950800000006,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "R3_2 outgoing: 0.0 != 1",
+      "IT outgoing: 2.0 != 1",
+      "Hospital departures: 1.0 != 2",
+      "Hospital returns: 1.0 != 2"
+    ],
+    "total_distance": 39.722899999999996,
+    "execution_time_sec": 630.8780636787415,
+    "penalty": 470.0,
+    "timestamp": "2025-09-11T22:56:53Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 1940.4576000000015,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "DT outgoing: 0.0 != 1",
+      "R2 outgoing: 2.0 != 1",
+      "Hospital departures: 1.0 != 2",
+      "Hospital returns: 1.0 != 2"
+    ],
+    "total_distance": 47.045,
+    "execution_time_sec": 148.30163311958313,
+    "penalty": 470.0,
+    "timestamp": "2025-09-11T23:05:28Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "optimizer": "COBYLA",
+    "reps": 1,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 169.8104,
+    "constraints_satisfied": true,
+    "total_distance": 63.107,
+    "execution_time": 321.8681890964508,
+    "timestamp": "2025-09-11T23:21:31Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 3,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 1258.1771999999983,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "GR outgoing: 2.0 != 1",
+      "R3_2 outgoing: 0.0 != 1",
+      "IT incoming: 0.0 != 1",
+      "Hospital departures: 1.0 != 2"
+    ],
+    "total_distance": 28.3599,
+    "execution_time_sec": 440.3323657512665,
+    "penalty": 300.0,
+    "timestamp": "2025-09-11T23:42:22Z"
+  },
+  {
+    "backend": "ibm_kingston",
+    "shots": 2048,
+    "optimizer": "COBYLA",
+    "reps": 3,
+    "status": "OptimizationResultStatus.SUCCESS",
+    "objective_value": 905.0609000000004,
+    "constraints_satisfied": false,
+    "constraint_violations": [
+      "DT outgoing: 0.0 != 1",
+      "GR incoming: 0.0 != 1",
+      "R2 incoming: 0.0 != 1",
+      "IT outgoing: 0.0 != 1"
+    ],
+    "total_distance": 48.8745,
+    "execution_time_sec": 730.9940891265869,
+    "penalty": 170,
+    "timestamp": "2025-09-12T00:35:22Z"
+  }
+]

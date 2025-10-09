@@ -1,0 +1,25 @@
+QAOA run evidence log
+Backend: ibm_pittsburgh
+Result status: OptimizationResultStatus.SUCCESS
+Objective value: 192.6675
+
+Variables:
+  x_DT_1: 0.0
+  x_DT_2: 1.0
+  x_GR_1: 1.0
+  x_GR_2: 0.0
+  x_R2_1: 1.0
+  x_R2_2: 0.0
+  x_R3_2_1: 1.0
+  x_R3_2_2: 0.0
+  x_IT_1: 0.0
+  x_IT_2: 1.0
+  s_1_0: 0.0
+  s_1_1: 0.0
+  s_2_0: 1.0
+  s_2_1: 0.0
+
+Assignments per trip:
+Trip 1: ['R3_2', 'IT']
+Trip 2: ['DT', 'GR', 'R2']
+Total distance: 60.4021
