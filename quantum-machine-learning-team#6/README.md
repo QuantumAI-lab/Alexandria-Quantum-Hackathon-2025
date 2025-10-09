@@ -10,56 +10,13 @@ This repository provides a **scientific and reproducible framework** for compari
 
 ---
 
-## 📂 Repository Structure
-```
 
-.
-├── data/
-│   ├── raw/               # Raw dataset
-│       ├──  pd_speech_feature.csv
-├── notebooks/
-│   ├── 01\_preprocessing.ipynb
-│   ├── 02\_classical\_training.ipynb
-│   ├── 03\_classical\_testing.ipynb
-│   ├── 04\_quantum\_training.ipynb
-│   └── 05\_quantum\_testing.ipynb
-├── models/                # Saved models + scalers
-├── results/               # Metrics, plots, logs
-├── requirements.txt
-└── README.md
-
-````
-
----
-
-## ⚙️ Installation
-```bash
-git clone https://github.com/sittana-afifi/Alex-Quantum-Hackathon-Diagnosis-and-prediction-of-Parkinson-s-disease-Team-6.git
-cd https://github.com/sittana-afifi/Alex-Quantum-Hackathon-Diagnosis-and-prediction-of-Parkinson-s-disease-Team-6.git
-python -m venv ven
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
-pip install -r requirements.txt
-````
-
----
-
-## 📊 Workflow
-
-1. Run `notebooks/01_preprocessing.ipynb` → create train/test sets
-2. Run `notebooks/02_classical_training.ipynb` → train classical models
-3. Run `notebooks/03_classical_testing.ipynb` → evaluate classical models
-4. Run `notebooks/04_quantum_training.ipynb` → train fully quantum model
-5. Run `notebooks/05_quantum_testing.ipynb` → evaluate on simulator & QPU
-
----
 
 ## 📈 Evaluation Metrics
 
 * Accuracy, Precision, Recall, F1-score
 * Confusion Matrix
 * Quantum-specific: **circuit depth**, **number of qubits**, **parameters**
-* Robustness under **noisy simulation**
 * Final inference on **real QPU hardware**
 
 ---
