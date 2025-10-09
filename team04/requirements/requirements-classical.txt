@@ -1,0 +1,23 @@
+# Requirements for Classical.ipynb
+# Classical optimization algorithms: Brute Force, A*, OR-Tools, Heuristics
+
+# Core Scientific Computing
+numpy>=1.24.0,<2.0.0
+scipy>=1.10.0
+pandas>=2.0.0
+
+# Classical Optimization Library
+ortools>=9.7.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Graph Algorithms (for A*)
+networkx>=3.0
+
+# Utilities
+tqdm>=4.65.0
+
+# Jupyter
+jupyter>=1.0.0
+ipykernel>=6.25.0
