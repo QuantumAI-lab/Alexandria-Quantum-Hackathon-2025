@@ -11,7 +11,7 @@ This repository provides a **scientific and reproducible framework** for compari
 ---
 
 ## Hackathon Context
-This project was developed during **Egypt’s First National Quantum Hackathon**, where our team achieved **2nd place** with the **QMedicine Project**
+This project was developed during **the Alexandria Quantum Hackathon, Egypt’s first-ever national quantum hackathon hosted by the Bibliotheca Alexandrina**, where our team achieved **2nd place 🥈** with the **QMedicine Project**
 
 ---
 
@@ -24,7 +24,7 @@ Our team developed **QMedicine**, a solution for early detection of Parkinson’
 ---
 
 ## 💡 Problem Statement & Motivation
-Parkinson's disease is a growing global health crisis — mortality rates **doubled** between 2000 and 2019, reaching **329,000 deaths** worldwide in 2019.
+Parkinson's disease is a growing global health crisis - mortality rates **doubled** between 2000 and 2019, reaching **329,000 deaths** worldwide in 2019.
 
 ### Early detection enables:
 - Slowed disease progression through early intervention  
@@ -161,7 +161,7 @@ Despite quantum noise and hardware limitations, the **8-qubit QNN** achieved str
 ---
 
 ## Acknowledgements
-This work was conducted during the **Egypt National Quantum Hackathon** — the first of its kind — where our **QMedicine** team won **2nd place** 🥈
+This work was conducted during the **Alexandria Quantum Hackathon**  where our **QMedicine** team won **2nd place** 🥈
 
 We thank our mentors and the organizing committee for their guidance and support in advancing Quantum Computing in Egypt.
 
