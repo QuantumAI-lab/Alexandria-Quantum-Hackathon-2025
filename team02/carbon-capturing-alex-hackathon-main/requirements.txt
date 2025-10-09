@@ -1,0 +1,9 @@
+pyscf
+ffsim
+qiskit_addon_sqd
+qiskit_ibm_runtime==0.40.1
+qiskit_nature==0.7.2
+qiskit==1.4.2
+git+https://github.com/qiskit-community/qiskit-algorithms.git
+matplotlib
+ipykernel
