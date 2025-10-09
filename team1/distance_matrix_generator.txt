@@ -1,0 +1,176 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Imports\n",
+    "Import required libraries for generating the distance matrix, including JSON handling, requests for OSRM API calls, pandas for DataFrame operations, and typing for type hints."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import json\n",
+    "import requests\n",
+    "import pandas as pd\n",
+    "from typing import List, Tuple"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Data Setup\n",
+    "Define the hospital and patient locations, OSRM server base URL, and VRP parameters (number of trips, max stops per trip, and depot node)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Hospital and patient locations\n",
+    "hospital = (\"Hospital\", (31.68462840171934, 29.99512653425452))\n",
+    "\n",
+    "patients = {\n",
+    "    \"DT\":   (31.811510, 30.139810),\n",
+    "    \"GR\":   (31.747827362371993, 30.011344405285193),\n",
+    "    \"R2\":   (31.669231198639675, 30.030388325206854),\n",
+    "    \"R3_2\": (31.688371339937028, 30.030940768851426),\n",
+    "    \"IT\":   (31.693811715848444, 30.01285635906825),\n",
+    "}\n",
+    "\n",
+    "# OSRM local base\n",
+    "OSRM = \"https://router.project-osrm.org/\"\n",
+    "\n",
+    "# QUBO layout\n",
+    "T = 2               # number of trips (enough to serve 5 patients at up to 3 per trip)\n",
+    "K = 3               # max stops per trip\n",
+    "DEPOT = \"D\"         # special node (represents staying at depot / ending trip)\n",
+    "NODES = [DEPOT] + list(patients.keys())   # choices inside a slot\n",
+    "# We add \"virtual\" slots k=0 and k=K+1 fixed to Depot to model Hospital legs"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Distance Matrix Generation\n",
+    "Define a function to call the OSRM API and generate a distance matrix in kilometers, then create the matrix using the hospital and patient coordinates."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def osrm_table_km(points_lonlat: List[Tuple[float, float]]) -> pd.DataFrame:\n",
+    "    \"\"\"Call OSRM /table locally and return km matrix (square).\"\"\"\n",
+    "    coord_str = \";\".join([f\"{lon},{lat}\" for lon, lat in points_lonlat])\n",
+    "    url = f\"{OSRM}/table/v1/driving/{coord_str}?annotations=distance\"\n",
+    "    r = requests.get(url)\n",
+    "    r.raise_for_status()\n",
+    "    M = r.json()[\"distances\"]  # meters\n",
+    "    df = pd.DataFrame(M) / 1000.0\n",
+    "    return df\n",
+    "\n",
+    "# Order: index 0 = Hospital, then patients in NODES order except DEPOT\n",
+    "ordered_labels = [hospital[0]] + list(patients.keys())\n",
+    "ordered_coords = [hospital[1]] + [patients[p] for p in patients.keys()]\n",
+    "Dmat = osrm_table_km(ordered_coords)  # km\n",
+    "Dmat.index = ordered_labels\n",
+    "Dmat.columns = ordered_labels"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Distance Helper Function\n",
+    "Define a helper function to retrieve distances with depot logic, handling special cases for the depot node (Hospital start/end)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def C(a: str, b: str) -> float:\n",
+    "    \"\"\"Get distance using depot logic: D->D = 0, D->p = Hospital->p, p->D = p->Hospital, p->q as usual.\"\"\"\n",
+    "    if a == DEPOT and b == DEPOT:\n",
+    "        return 0.0\n",
+    "    if a == DEPOT:\n",
+    "        return float(Dmat.loc[\"Hospital\", b])\n",
+    "    if b == DEPOT:\n",
+    "        return float(Dmat.loc[a, \"Hospital\"])\n",
+    "    return float(Dmat.loc[a, b])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Save Distance Matrix\n",
+    "Save the distance matrix to both CSV and JSON formats for further use."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Dmat.to_csv(\"cost_matrix_km.csv\")\n",
+    "with open(\"cost_matrix_km.json\", \"w\") as f:\n",
+    "    json.dump(json.loads(Dmat.to_json()), f, indent=2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Notes\n",
+    "- Ensure a local OSRM server is running or update the `OSRM` URL to point to a valid OSRM instance (e.g., a public server or a locally hosted one).\n",
+    "- To set up a local OSRM server, follow the instructions at [OSRM Project](https://github.com/Project-OSRM/osrm-backend).\n",
+    "- The `cost_matrix_km.csv` and `cost_matrix_km.json` files will be saved in your Colab environment.\n",
+    "- The JSON file format is compatible with the VRP solver from the previous artifact, containing distances in kilometers between the hospital and patients, and between patients.\n",
+    "- Example JSON format:\n",
+    "```json\n",
+    "{\n",
+    "    \"Hospital\": {\"Hospital\": 0.0, \"DT\": 15.2, \"GR\": 10.5, ...},\n",
+    "    \"DT\": {\"Hospital\": 15.2, \"DT\": 0.0, \"GR\": 7.8, ...},\n",
+    "    ...\n",
+    "}\n",
+    "```"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
