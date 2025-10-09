@@ -97,6 +97,9 @@ The `docs/` directory contains all project documentation and presentation materi
 │   ├── quantum_solution.ipynb
 │   ├── requirements_classic.txt
 │   └── requirements_quantum.txt
+├── prerequisites
+│   ├── Best__Route_bet_two_corrdinates.ipynb
+│   └── Full_Route_Between_two_coordinates.ipynb
 ├── quantum
 │   ├── fully_quantum_approach.py
 │   ├── quantum_statistics
