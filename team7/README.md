@@ -47,27 +47,42 @@ This makes classical approaches computationally expensive.
 To scale beyond small instances, we reformulate the routing problem as a **Quadratic Unconstrained Binary Optimization (QUBO)** problem.
 
 ### QUBO Formulation
-- **Binary variables**  
- 
-  
-- **Constraints (encoded as penalties)**  
-  1. Each patient must be assigned exactly once.  
-  2. Each trip can serve at most 3 patients.  
-  3. Trips must start and end at the hospital.  
+![qubo\_fromulation.png](qubo_formulation.png)
 
-- **Objective function**  
-  Minimize the **total travel distance**:
-  
+---
+
+### Qiskit Implementation
+
+We encode the above into a `QuadraticProgram` and convert it to QUBO with  
+`QuadraticProgramToQubo()`. The QUBO is solved using **QAOA** (Check prerequisites/fully\_quantum\_approach.py)
+
+### Variable Reduction
+
+The model requires **30 qubits**.
+To make execution feasible:
+
+* We **drop the stop dimension** inside the binary variables:
+
+  $x_{i,j,t} \;\mapsto\; y_{i,t}$
+
+  reducing #qubits from $30 \to 10$.
+* A **classical post-processing layer** filters out invalid assignments
+
+This hybrid scheme balances **quantum search** with **classical validation**, making it more scalable.
+
 
 ### Why Quantum?
-Classical solvers must check each possible route partition, which grows combinatorially.  
-Quantum optimization algorithms (e.g., **QAOA**, **Quantum Annealing**) can explore many route combinations **in parallel**, offering potential speedups.
+*REVIEW: Needs revision — the original claim about "parallel" exploration and guaranteed speedups is misleading.*
+
+~~Classical solvers must check each possible route partition, which grows combinatorially.~~
+~~Quantum optimization algorithms (e.g., **QAOA**, **Quantum Annealing**) can explore many route combinations **in parallel**, offering potential speedups.~~
 
 ---
 
 ##  Repository Structure
 ```bash
 .
+├── LICENSE
 ├── notebooks
 │   ├── classical_routing_optimization.ipynb
 │   ├── OptimizationProblemData.json
@@ -76,11 +91,13 @@ Quantum optimization algorithms (e.g., **QAOA**, **Quantum Annealing**) can expl
 │   └── requirements_quantum.txt
 ├── prerequisites
 │   ├── Best__Route_bet_two_corrdinates.ipynb
-│   └── Full_Route_Between_two_coordinates.ipynb
+│   ├── Full_Route_Between_two_coordinates.ipynb
+│   └── fully_quantum_approach.py
 ├── quantum_statistics
 │   ├── quantum_solution.ipynb
 │   └── solutions.json
 ├── README.md
+├── Smart Traffic Optimization In the New Capital.pptx
 └── Technical_Report.pdf
 
 ```
