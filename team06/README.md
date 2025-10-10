@@ -95,21 +95,17 @@ All classical models were optimized through standard ML pipelines for fair compa
 ## Results & Insights
 
 ### SVM vs. Quantum SVM (QSVM)
-| Method | Accuracy | Notes |
-|---------|-----------|-------|
-| **SVM** | **92%** | Optimized with MinMaxScaler, PCA, and class-weight handling |
-| **QSVM** | **82%** | Quantum kernel estimation + preprocessing pipeline |
+![SVM vs QSVM](Results/classical-vs-quantum/SVM-vs-QSVM.png)
+
 
 **Insight:**  
 The classical SVM outperformed QSVM; however, QSVM achieved **competitive accuracy** using similar preprocessing — indicating strong potential for **quantum-enhanced classification**.
 
 ---
 
-### Neural Network (NN) vs. Variational Quantum Classifier (VQC)
-| Method | Accuracy | Notes |
-|---------|-----------|-------|
-| **NN** | **95.3%** | Achieved highest performance overall |
-| **VQC (Simulator)** | **75%** | Best config: 4 qubits, Z Feature Map, RealAmplitudes ansatz (10 reps), SPSA optimizer |
+### Neural Network (NN) vs. Quantum Neural Network (QNN)
+![NN vs VQC](Results/classical-vs-quantum/NN-vs-QNN.png)
+
 
 **Insight:**  
 The classical NN achieved the highest accuracy, but the VQC demonstrated **promising performance given the simulator constraints**.  
