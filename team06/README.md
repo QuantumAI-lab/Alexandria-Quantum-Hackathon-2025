@@ -114,7 +114,7 @@ This suggests that **variational quantum classifiers can approach classical NN p
 ---
 
 ### Variational Quantum Classifier (Real Hardware Results)
-We executed multiple **Quantum Neural Network (QNN)** configurations on the **IBM Quantum backend** `ibm_kingston`.  
+We executed multiple **QNN** configurations on the **IBM Quantum backend** `ibm_kingston`.  
 The **best-performing configuration** achieved promising real-hardware performance metrics.
 
 
