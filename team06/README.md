@@ -111,30 +111,19 @@ The classical SVM outperformed QSVM; however, QSVM achieved **competitive accura
 | **NN** | **95.3%** | Achieved highest performance overall |
 | **VQC (Simulator)** | **75%** | Best config: 4 qubits, Z Feature Map, RealAmplitudes ansatz (10 reps), SPSA optimizer |
 
+**Insight:**  
+The classical NN achieved the highest accuracy, but the VQC demonstrated **promising performance given the simulator constraints**.  
+This suggests that **variational quantum classifiers can approach classical NN performance** in biomedical tasks and could improve further with **more qubits and optimized quantum circuits**.
+
 ---
 
 ### Variational Quantum Classifier (Real Hardware Results)
 We executed multiple **Quantum Neural Network (QNN)** configurations on the **IBM Quantum backend** `ibm_kingston`.  
 The **best-performing configuration** achieved promising real-hardware performance metrics.
 
-| Parameter | Value |
-|------------|--------|
-| **Backend** | `ibm_kingston` |
-| **Qubits** | 8 |
-| **Feature Map** | Z Feature Map |
-| **Ansatz** | RealAmplitudes |
-| **Repetitions (Reps)** | 10 |
-| **Optimizer** | SPSA |
-| **Parameters** | 88 |
-| **Circuit Depth** | 40 |
 
-#### Performance on Real Hardware
-| Metric | Value |
-|---------|--------|
-| **Accuracy** | 0.7434 |
-| **Precision** | 0.7606 |
-| **Recall** | 0.9558 |
-| **F1 Score** | 0.8471 |
+#### Best Real-Hardware Run
+![Best Real-Hardware Run](Hardware/logs/run15%20-%20Best%20Run/run15_plot.png)
 
 **Insight:**  
 Despite quantum noise and hardware limitations, the **8-qubit QNN** achieved strong real-hardware performance, showing the **practical viability of variational quantum classifiers** in real-world biomedical tasks.
@@ -153,7 +142,7 @@ Despite quantum noise and hardware limitations, the **8-qubit QNN** achieved str
 ---
 
 ## Technologies Used
-- **Qiskit**, **scikit-learn**, **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**
+- **Qiskit**, **pennylane**, **scikit-learn**, **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**
 - **Quantum Hardware:** IBM Quantum (`ibm_kingston`)
 - **Optimization:** SPSA, COBYLA
 - **Preprocessing:** PCA, MinMaxScaler, class-weight balancing
