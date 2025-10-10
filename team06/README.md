@@ -55,8 +55,8 @@ The project combines **quantum** and **classical** machine learning approaches f
 
 ### Classical Machine Learning
 Benchmarked against traditional models:
-- **Neural Networks (NN)**
 - **Support Vector Machines (SVM)**
+- **Neural Networks (NN)**
 
 
 All classical models were optimized through standard ML pipelines for fair comparison.
@@ -65,16 +65,16 @@ All classical models were optimized through standard ML pipelines for fair compa
 
 ### Quantum Machine Learning
 - **Algorithms:**  
-  - Variational Quantum Classifier (VQC)  
   - Quantum Support Vector Machine (QSVM)
+  - Variational Quantum Classifier (VQC)  
 
 - **Techniques Used:**
+  - Dimensionality Reduction: *PCA*  
+  - Class Weight Handling: *Balanced classes for SVM & QSVM*
   - Quantum data encoding: *Angle* and *Amplitude*  
   - Variational ansätze: *RealAmplitudes*, *EfficientSU2*  
   - Optimization: *SPSA* and *COBYLA*  
   - Quantum Feature Mapping: *Z Feature Map*  
-  - Dimensionality Reduction: *PCA*  
-  - Class Weight Handling: *Balanced classes for SVM & QSVM*
 
 ---
 
@@ -115,7 +115,7 @@ This suggests that **variational quantum classifiers can approach classical NN p
 
 ---
 
-### Variational Quantum Classifier (Real Hardware Results)
+### VQC (Real Hardware Results)
 We executed multiple **QNN** configurations on the **IBM Quantum backend** `ibm_kingston`.  
 The **best-performing configuration** achieved promising real-hardware performance metrics.
 
