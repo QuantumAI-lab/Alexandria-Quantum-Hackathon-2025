@@ -53,6 +53,16 @@ The key challenge lies in the **“diagnostic blind spot”** — traditional me
 
 The project combines **quantum** and **classical** machine learning approaches for performance comparison.
 
+### Classical Machine Learning
+Benchmarked against traditional models:
+- **Neural Networks (NN)**
+- **Support Vector Machines (SVM)**
+
+
+All classical models were optimized through standard ML pipelines for fair comparison.
+
+---
+
 ### Quantum Machine Learning
 - **Algorithms:**  
   - Variational Quantum Classifier (VQC)  
@@ -64,20 +74,10 @@ The project combines **quantum** and **classical** machine learning approaches f
   - Optimization: *SPSA* and *COBYLA*  
   - Quantum Feature Mapping: *Z Feature Map*  
   - Dimensionality Reduction: *PCA*  
-  - Data Scaling: *MinMaxScaler*  
-  - Class Weight Handling: *Balanced classes for QSVM*
+  - Class Weight Handling: *Balanced classes for SVM & QSVM*
 
 ---
 
-### Classical Machine Learning
-Benchmarked against traditional models:
-- **Neural Networks (NN)**
-- **Support Vector Machines (SVM)**
-
-
-All classical models were optimized through standard ML pipelines for fair comparison.
-
----
 
 ## Evaluation Metrics
 | Metric | Description |
@@ -94,7 +94,8 @@ All classical models were optimized through standard ML pipelines for fair compa
 
 ## Results & Insights
 
-### SVM vs. Quantum SVM (QSVM)
+### SVM vs. QSVM
+
 ![SVM vs QSVM](Results/classical-vs-quantum/SVM-vs-QSVM.png)
 
 
@@ -103,7 +104,8 @@ The classical SVM outperformed QSVM; however, QSVM achieved **competitive accura
 
 ---
 
-### Neural Network (NN) vs. Quantum Neural Network (QNN)
+### NN vs. VQC (simulator)
+
 ![NN vs VQC](Results/classical-vs-quantum/NN-vs-QNN.png)
 
 
